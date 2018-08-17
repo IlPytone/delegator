@@ -31,7 +31,7 @@ def on_chat_message(msg):
 @app.route('/', methods=['GET', 'POST'])
 def pass_update():
 	update_queue.put(request.data)
-    return 'OK [200] HTTP CODE!!'
+	return 'OK [200] HTTP CODE!!'
 
 
 if __name__ == '__main__':
