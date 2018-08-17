@@ -1,1 +1,1 @@
-app: app.py 525915971:AAHCrRmA_e8BsKDVLFw6pB6XS_BjJsUEnqM @signorinaggio
+web: python app.py 525915971:AAHCrRmA_e8BsKDVLFw6pB6XS_BjJsUEnqM @signorinaggio
