@@ -27,7 +27,7 @@ def on_chat_message(msg):
 			bot.sendMessage(chat_id,"Buongiorno.")
 		elif text.startswith("/ping"):
 			bot.sendMessage(chat_id,"Pong.")
-
+bot.message_loop({'chat': on_chat_message}, source=UPDATE_QUEUE)
 @app.route('/', methods=['GET', 'POST'])
 def pass_update():
 	update_queue.put(request.data)
