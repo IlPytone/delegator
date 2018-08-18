@@ -1,1 +1,1 @@
-web: gunicorn app:main.py 525915971:AAHCrRmA_e8BsKDVLFw6pB6XS_BjJsUEnqM @signorinaggio
+web: python main.py 525915971:AAHCrRmA_e8BsKDVLFw6pB6XS_BjJsUEnqM @signorinaggio
