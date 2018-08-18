@@ -24,9 +24,9 @@ def on_chat_message(msg):
 	elif content_type == "text":
 		text = msg["text"].lower()
 		if text.startswith("/start"):
-			bot.sendMessage("Buongiorno.")
+			bot.sendMessage(chat_id,"Buongiorno.")
 		elif text.startswith("/ping"):
-			bot.sendMessage("Pong.")
+			bot.sendMessage(chat_id,"Pong.")
 
 @app.route('/', methods=['GET', 'POST'])
 def pass_update():
