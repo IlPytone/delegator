@@ -17,7 +17,9 @@ def on_chat_message(msg):
 	content_type, chat_type, chat_id = telepot.glance(msg)
 	if content_type == "document":
 		file_id = msg['document']['file_id']
+		messageId = test['message_id']
 		bot.sendDocument(CHANNEL,file_id)
+		bot.deleteMessage((chat_id, message_id))
 
 	elif content_type == "text":
 		text = msg["text"].lower()
