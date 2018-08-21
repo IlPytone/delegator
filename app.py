@@ -19,7 +19,7 @@ def on_chat_message(msg):
 		file_id = msg['document']['file_id']
 		messageId = msg['message_id']
 		bot.sendDocument(CHANNEL,file_id)
-		bot.deleteMessage((chat_id, message_id))
+		bot.deleteMessage((chat_id, messageId))
 
 	elif content_type == "text":
 		text = msg["text"].lower()
