@@ -1,4 +1,3 @@
-import sys
 import telepot
 from flask import Flask, request
 
@@ -7,12 +6,11 @@ try:
 except ImportError:
     from queue import Queue
 
-TOKEN = sys.argv[1]
-CHANNEL = sys.argv[2]
+TOKEN = "525915971:AAHCrRmA_e8BsKDVLFw6pB6XS_BjJsUEnqM"
+CHANNEL = "@signorinaggio"
 app = Flask(__name__)
 update_queue = Queue()
 bot = telepot.Bot(TOKEN)
-CHANNEL = sys.argv[2]
 
 
 def on_chat_message(msg):
