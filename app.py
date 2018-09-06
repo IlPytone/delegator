@@ -11,14 +11,15 @@ CHANNEL = "@signorinaggio"
 app = Flask(__name__)
 update_queue = Queue()
 bot = telepot.Bot(TOKEN)
-
-
+firma = "@formaementisChat"
+EBOOK_LIST = []
 def on_chat_message(msg):
 	content_type, chat_type, chat_id = telepot.glance(msg)
 	if content_type == "document":
 		file_id = msg['document']['file_id']
 		messageId = msg['message_id']
-		bot.sendDocument(CHANNEL,file_id)
+		bot.sendDocument(CHANNEL,file_id,caption=firma)
+		EBOOK_LIST.append(file_id)
 		if chat_id < 0 and chat_id != CHANNEL:
 			bot.deleteMessage((chat_id, messageId))
 
